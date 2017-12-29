@@ -92,6 +92,13 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
+
+app.get('/x', function (req, res) {
+  // try to initialize the db on every request if it's not already
+  // initialized.
+    res.send('alio valio');
+});
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
